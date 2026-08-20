@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "education_programs",
+  "info": {
+    "singularName": "education-program",
+    "pluralName": "education-programs",
+    "displayName": "education-program"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "badge": {
+      "type": "string"
+    },
+    "emoji": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

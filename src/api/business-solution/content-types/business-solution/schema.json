@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_solutions",
+  "info": {
+    "singularName": "business-solution",
+    "pluralName": "business-solutions",
+    "displayName": "business-solution"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

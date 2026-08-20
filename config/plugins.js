@@ -21,6 +21,13 @@ const deniedExecutableTypes = [
 ];
 
 module.exports = () => ({
+  // --- Plugins désactivés (non utilisés) ---
+  'content-releases': false,
+  'review-workflows': false,
+  'plugin-cloud': false,
+  'i18n': false,
+
+  // --- Plugins existants avec leurs configurations ---
   'users-permissions': {
     config: {
       jwtManagement: 'refresh',
