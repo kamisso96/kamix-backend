@@ -1,61 +1,59 @@
-# 🚀 Getting started with Strapi
+# KAMIX Backend (Strapi)
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+Backend du site vitrine **Haikou KAMIX Consulting Co., Ltd.**, construit avec **Strapi 5** et **MySQL**.
 
-### `develop`
+## 🧰 Technologies
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+- **Strapi 5** (CMS headless open-source)
+- **MySQL** (base de données)
+- **Node.js 22** (recommandé)
 
-```
-npm run develop
-# or
-yarn develop
-```
+## ⚙️ Installation locale
 
-### `start`
+1. Assurez-vous d'utiliser Node.js 22 :
+   nvm install 22
+   nvm use 22
+   node -v
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+2. Installez les dépendances :
+   npm install
 
-```
-npm run start
-# or
-yarn start
-```
+3. Créez un fichier `.env` à la racine avec les variables nécessaires (voir `.env.example`).
 
-### `build`
+4. Démarrez Strapi en mode développement :
+   npm run develop
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+   L'admin est accessible sur http://localhost:1337/admin.
 
-```
-npm run build
-# or
-yarn build
-```
+## 🔐 Variables d'environnement
 
-## ⚙️ Deployment
+Un fichier `.env.example` est fourni. Copiez-le en `.env` et renseignez les valeurs.
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+## 🧩 Plugins désactivés
 
-```
-yarn strapi deploy
-```
+Pour réduire la surface d'attaque et alléger l'application, les plugins suivants sont désactivés dans `config/plugins.js` :
 
-## 📚 Learn more
+- `content-releases`
+- `review-workflows`
+- `plugin-cloud`
+- `i18n`
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+Ils peuvent être réactivés en supprimant la ligne correspondante ou en mettant `true`.
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+## 📡 API publique
 
-## ✨ Community
+Les collections sont exposées via l'API REST. Le rôle **Public** a uniquement les permissions de lecture (`find`, `findOne`). Les opérations d'écriture sont réservées aux administrateurs.
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+## 🚀 Déploiement
 
----
+Pour la production, utilisez `npm run start` et hébergez Strapi sur un VPS avec MySQL. Ne jamais exposer l'admin Strapi directement sur Internet ; utilisez un VPN ou une restriction d'IP.
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## 📝 Contenu géré
+
+- Services
+- Témoignages
+- Why Us
+- Services éducatifs
+- Programmes de bourses
+- Solutions Business
+- À propos (mission/vision)
