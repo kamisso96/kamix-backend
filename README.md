@@ -57,3 +57,7 @@ Pour la production, utilisez `npm run start` et hébergez Strapi sur un VPS avec
 - Programmes de bourses
 - Solutions Business
 - À propos (mission/vision)
+
+## 📄 Licence
+
+Tous droits réservés – Haikou KAMIX Consulting Co., Ltd.
