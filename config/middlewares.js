@@ -7,22 +7,17 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:'],
-          'style-src': ["'self'", 'https:', 'unsafe-inline'],
-          'script-src': ["'self'", 'https:', 'unsafe-inline'],
+          'default-src': ["'self'", 'http:', 'https:'],
+          'style-src': ["'self'", 'http:', 'https:', 'unsafe-inline'],
+          'script-src': ["'self'", 'http:', 'https:', 'unsafe-inline'],
+          'img-src': ["'self'", 'data:', 'blob:', 'http:', 'https:'],
+          'font-src': ["'self'", 'data:', 'http:', 'https:'],
+          'connect-src': ["'self'", 'http:', 'https:'],
         },
       },
     },
   },
-  {
-    name: 'strapi::cors',
-    config: {
-      origin: ['http://localhost:4321'], // Ajoutez ici votre domaine de production plus tard
-      methods: ['GET', 'POST', 'PUT', 'DELETE'],
-      headers: ['Content-Type', 'Authorization'],
-    },
-  },
+  'strapi::cors',
   'strapi::query',
   'strapi::body',
   'strapi::session',
